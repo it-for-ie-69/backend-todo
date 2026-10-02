@@ -1,2 +1,1 @@
-pnpm i cors
-pnpm i -D @types/cors
+# Backend Starter Template for Todo Application
