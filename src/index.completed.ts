@@ -1,9 +1,13 @@
 import express from "express";
 import { pool } from "./db.js";
+import cors from "cors";
 
 //Intializing the express app
 const app = express();
 app.use(express.json());
+
+// Enable CORS for all routes
+app.use(cors());
 
 app.get("/todos", async (req, res) => {
   const query = await pool.query("SELECT * from todos;");
